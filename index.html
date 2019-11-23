@@ -2,10 +2,205 @@
 <html lang="en">
 <head>
     <title>Exercise 1</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .card .card-header {
+            font-size: 26px;
+            background-color: slategray;
+        }
+
+        .card .card-body {
+            font-size: 16px;
+        }
+
+        .card .card-body .form-group {
+            text-align: left;
+        }
+
+        .card .card-body .form-group .form-text {
+            font-size: 12px;
+            text-align: left;
+            font-weight: lighter;
+            color: red;
+        }
+
+        .card .card-body .form-group .form-check .form-check-input {
+            margin-left: 0;
+        }
+
+        .card .card-body button:hover {
+            background-color: red;
+        }
+
+        .card .card-footer {
+            font-size: 14px;
+            font-weight: lighter;
+            background-color: slategray;
+            color: white;
+        }
+
+        .table {
+            font-size: 14px;
+        }    
+    </style>
 </head>
 <body>
-    <center>
-        <h1>Biodata</h1>
-    </center>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-header">Biodata</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="namaDepan">Nama Depan</label>
+                                <input type="text" class="form-control" id="namaDepan" aria-describedby="namaDepan" value="Aris" readonly>
+                                <small id="namaDepan" class="form-text">isi dengan nama depan</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="namaBelakang">Nama Belakang</label>
+                                <input type="text" class="form-control" id="namaBelakang" aria-describedby="namaBelakang" value="Mulyadi" readonly>
+                                <small id="namaBelakang" class="form-text">isi dengan nama belakang</small>
+                            </div> 
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" class="form-control" id="email"  value="abiesah@gmail.com" readonly>
+                                <small id="namaBelakang" class="form-text">isi dengan nama belakang</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Tanggal Lahir</label>
+                                <input type="text" class="form-control" id="date" value="22/10/1987" readonly>
+                                <small id="namaBelakang" class="form-text">isi dengan tanggal lahir</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="jk">Jenis Kelamin</label>   
+                                <select class="form-control" id="jk">
+                                    <option selected>Laki-laki</option>
+                                    <option>Perempuan</option>
+                                </select>
+                                <small id="namaBelakang" class="form-text">isi dengan jenis kelamin</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat Lengkap</label>
+                                <textarea  class="form-control" name="alamat" id="alamat" cols="30" rows="10" readonly>Jimbun RT.002 RW.005 Desa Giwangretno Kecamatan Sruweng Kabupaten Kebumen</textarea>
+                                <small id="alamat" class="form-text">isi dengan alamat lengkap</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="kota">Kota</label>   
+                                <select class="form-control" id="kota">
+                                    <option selected>Kebumen</option>
+                                </select>
+                                <small id="kota" class="form-text">isi dengan kota</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="kodePos">Kode Pos</label>
+                                <input type="kodePos" class="form-control" id="kodePos"  value="54362" readonly>
+                                <small id="kodePos" class="form-text">isi dengan kode pos</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="negara">Negara</label>   
+                                <select class="form-control" id="negara">
+                                    <option selected>Indonesia</option>
+                                </select>
+                                <small id="negara" class="form-text">isi dengan negara</small>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Submit</button>
+                        </form>        
+                    </div>
+                    <div class="card-footer">@Copyright Kebumen, 23-11-2019</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Biodata Diri</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="3"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Nama Depan</td>
+                                            <td>:</td>
+                                            <td><b>Aris</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Belakang</td>
+                                            <td>:</td>
+                                            <td><b>Mulyadi</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alamat Email</td>
+                                            <td>:</td>
+                                            <td><b>abiesah@gmail.com</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tanggal Lahir</td>
+                                            <td>:</td>
+                                            <td><b>22 Oktober 1987</b></td>
+                                        </tr> 
+                                        <tr>
+                                            <td>Jenis Kelamin</td>
+                                            <td>:</td>
+                                            <td><b>Laki-laki</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alamat Lengkap</td>
+                                            <td>:</td>
+                                            <td><b>Jimbun RT.002 RW.005 Desa Giwangretno Kecamatan Sruweng Kabupaten Kebumen</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kota</td>
+                                            <td>:</td>
+                                            <td><b>Kebumen</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kode Pos</td>
+                                            <td>:</td>
+                                            <td><b>54362</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Negara</td>
+                                            <td>:</td>
+                                            <td><b>Indonesia</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Terima Kasih</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
